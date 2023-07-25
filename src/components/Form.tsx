@@ -58,7 +58,7 @@ export const Form: React.FC<FormProps> = ({
       return;
     }
 
-    if (patients.some((e) => e.email == inputState.email)) {
+    if (patients.some((e) => e.email == inputState.email) && !update.isUpdate) {
       setErrorText("Ese paciente ya se encuentra registrado");
       setError(true);
       return;
